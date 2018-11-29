@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvPuntaje"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="1dp"
+        android:hint="Puntaje"
+        app:layout_constraintBottom_toTopOf="@+id/etIngreses"
+        app:layout_constraintEnd_toStartOf="@+id/tvValor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etIngreses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="545dp"
+        android:ems="10"
+        android:hint="Ingrese numero"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvPuntaje"
+        app:layout_constraintTop_toBottomOf="@+id/tvValor" />
+
+    <Button
+        android:id="@+id/buttonVerificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="Verificar"
+        android:onClick="verificar"
+        app:layout_constraintBottom_toTopOf="@+id/tvAdivine"
+        app:layout_constraintStart_toStartOf="@+id/etIngreses"
+        app:layout_constraintTop_toBottomOf="@+id/etIngreses" />
+
+    <TextView
+        android:id="@+id/tvAdivine"
+        android:layout_width="215dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="467dp"
+        android:hint="Adivine un numero entre 1 y 50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVerificar" />
+
+    <TextView
+        android:id="@+id/tvValor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="174dp"
+        android:hint="0"
+        app:layout_constraintBottom_toTopOf="@+id/etIngreses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPuntaje"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
